@@ -1,0 +1,14 @@
+google-genai
+python-dotenv
+sentence-transformers
+faiss-cpu
+numpy
+pyPDF2 
+groq
+schedule 
+streamlit
+schedule
+requests 
+pandas
+
+
