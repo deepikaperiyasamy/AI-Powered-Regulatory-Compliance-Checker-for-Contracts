@@ -9,27 +9,27 @@ def send_notification(subject, notification):
     
     # Send notification using SMTP Protocol
 
-    # try:
-    #     sender = "infosysintern502@gmail.com"
-    #     password = "imkj jnsy cfob duhe"
-    #     receiver = "trailmail502@gmail.com"
+    try:
+        sender = "infosysintern502@gmail.com"
+        password = "imkj jnsy cfob duhe"
+        receiver = "trailmail502@gmail.com"
 
-    #     # create message
-    #     msg = MIMEText(f"{notification}")
-    #     msg["Subject"]=subject
-    #     msg["From"]= f"Deepika <{sender}>"
-    #     msg["To"]= receiver
+        # create message
+        msg = MIMEText(f"{notification}")
+        msg["Subject"]=subject
+        msg["From"]= f"Deepika <{sender}>"
+        msg["To"]= receiver
 
-    #     #connect to the Gmail SMTP server
-    #     with smtplib.SMTP("smtp.gmail.com", 587) as server:
-    #         server.starttls() #start TLS encrytion
-    #         server.login(sender, password)
-    #         server.send_message(msg)
+        #connect to the Gmail SMTP server
+        with smtplib.SMTP("smtp.gmail.com", 587) as server:
+            server.starttls() #start TLS encrytion
+            server.login(sender, password)
+            server.send_message(msg)
             
-    #     print("✅ Email sent successfully!!!!")
+        print("✅ Email sent successfully!!!!")
         
-    # except Exception as e:
-    #     print("Error Occured",e)
+    except Exception as e:
+        print("Error Occured",e)
 
     # Send notification using slack
 
